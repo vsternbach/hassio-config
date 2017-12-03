@@ -1,0 +1,31 @@
+# mi_band_2:
+#   hide_if_away: false
+#   icon:
+#   mac: BLE_FB:94:B8:00:37:9C
+#   name: MI Band 2
+#   picture:
+#   track: true
+#   vendor: unknown
+
+# ble_d0a1114b7fc2:
+#   hide_if_away: false
+#   icon:
+#   mac: BLE_D0:A1:11:4B:7F:C2
+#   name: ble d0a1114b7fc2
+#   picture:
+#   track: false
+#   vendor: unknown
+
+# yunmaiism2w:
+#   hide_if_away: false
+#   icon:
+#   mac: BLE_60:64:05:A5:43:38
+#   name: YUNMAI-ISM2-W
+#   picture:
+#   track: false
+#   vendor: Texas Instruments
+
+mi5_gemini:
+  hide_if_away: false
+  name: Vlad
+  track: true

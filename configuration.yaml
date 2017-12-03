@@ -1,0 +1,120 @@
+homeassistant:
+  # Name of the location where Home Assistant is running
+  name: Home
+  # Location required to calculate the time the sun rises and sets
+  latitude: 31.5
+  longitude: 34.75
+  # Impacts weather/sunrise data (altitude above sea level in meters)
+  elevation: 169
+  # metric for Metric, imperial for Imperial
+  unit_system: metric
+  # Pick yours from here: http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+  time_zone: Asia/Jerusalem
+  # Customization file
+  customize: !include customize.yaml
+
+# Show links to resources in log and frontend
+# introduction:
+
+# Enables the frontend
+frontend:
+
+# Enables configuration UI
+config:
+
+http:
+  base_url: https://voland.duckdns.org:8123
+  ssl_certificate: /ssl/fullchain.pem
+  ssl_key: /ssl/privkey.pem
+  # Secrets are defined in the file secrets.yaml
+  api_password: !secret http_password
+  # Uncomment this if you are using SSL/TLS, running in Docker container, etc.
+  # base_url: example.duckdns.org:8123
+
+# Checks for available updates
+# Note: This component will send some information about your system to
+# the developers to assist with development of Home Assistant.
+# For more information, please see:
+# https://home-assistant.io/blog/2016/10/25/explaining-the-updater/
+updater:
+  # Optional, allows Home Assistant developers to focus on popular components.
+  # include_used_components: true
+
+# Discover some devices automatically
+discovery:
+
+# Allows you to issue voice commands from the frontend in enabled browsers
+conversation:
+
+# Enables support for tracking state changes over time
+history:
+
+# View all events in a logbook
+logbook:
+
+# Enables a map showing the location of tracked devices
+map:
+
+# Track the sun
+sun:
+
+# Weather prediction
+sensor:
+  - platform: yr
+
+# Text to speech
+tts:
+  - platform: google
+
+panel_iframe:
+  configurator:
+    title: Configurator
+    icon: mdi:wrench
+    url: http://hassio.local:3218
+
+device_tracker:
+  - platform: owntracks
+    max_gps_accuracy: 200
+
+mqtt:
+  broker: m20.cloudmqtt.com
+  port: 26017
+  username: hass
+  password: fuckt2
+
+telegram_bot:
+  - platform: polling
+    api_key: 304658762:AAG-_o5Z1usXxlJHimNzLaEGI5W-wg9biMM
+    allowed_chat_ids:
+      - 213994016
+
+notify:
+  - name: telegram
+    platform: telegram
+    chat_id: 213994016
+
+zone:
+  name: Home
+  icon: mdi:home
+  latitude: 32.057232500000005
+  longitude: 34.76805859375001
+  radius: 50
+
+zone 2:
+  name: Work
+  icon: mdi:work
+  latitude: 32.11557250000001
+  longitude: 34.84291796875
+  radius: 500
+
+switch:
+  - platform: rpi_rf
+    gpio: 17
+    switches:
+      tv_light:
+        code_on: 6172417
+        code_off: 6172417
+
+group: !include groups.yaml
+automation: !include automations.yaml
+script: !include scripts.yaml

@@ -1,0 +1,32 @@
+binary_sensor.cube_158d000101af4f:
+  friendly_name: Cube Controller
+binary_sensor.switch_158d0000ed5140:
+  friendly_name: Livingroom Switch
+  icon: mdi:radio-button-checked
+binary_sensor.switch_158d0000eff014:
+  friendly_name: Bedroom Switch
+binary_sensor.door_window_sensor_158d0000efa640:
+  friendly_name: Door Sensor
+binary_sensor.motion_sensor_158d0000f195b0:
+  friendly_name: Motion Sensor
+switch.plug_158d00010c58ea:
+  friendly_name: Plug
+light.yeelight_rgb_f0b429a81a2a:
+  friendly_name: Livingroom Light
+light.yeelight_white_f0b4290ecca9:
+  friendly_name: Bathroom Light
+light.gateway_light_286c0785e806:
+  friendly_name: Gateway Light
+sensor.illuminance_286c0785e806:
+  friendly_name: Gateway Light Sensor
+sensor.temperature_158d00010e1553:
+  friendly_name: Indoor Temperature
+sensor.humidity_158d00010e1553:
+  friendly_name: Indoor Humidity
+media_player.mibox3:
+  friendly_name: MiBox Chromecast
+sensor.yr_symbol:
+  friendly_name: Weather
+device_tracker.mi5_gemini:
+  icon: mdi:phone-android
+  friendly_name: Vlad
